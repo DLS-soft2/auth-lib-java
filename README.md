@@ -1,6 +1,6 @@
 # auth-lib-java
 
-Shared RBAC library for DLS-2 Spring Boot services. Reads trusted `X-User-*` headers injected by the API Gateway and enforces role-based permission checks.
+Shared RBAC library for Spring Boot services. Reads trusted `X-User-*` headers injected by the API Gateway and enforces role-based permission checks.
 
 ## How It Works
 
@@ -53,13 +53,23 @@ public class RestaurantController {
 | `restaurant` | restaurants_*, menu_*, users_read, users_update |
 | `admin` | `*` (all permissions) |
 
-## Auto-Configuration
+## Install
 
-The library auto-configures via Spring Boot's `AutoConfiguration.imports`. Just add the dependency — no `@EnableXxx` or manual bean registration needed.
+Add the JitPack repository and dependency to your service's `pom.xml`:
 
-## Build and Test
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 
-```bash
-./mvnw compile
-./mvnw test        # 30 tests
+<dependency>
+    <groupId>com.github.DLS-soft2</groupId>
+    <artifactId>auth-lib-java</artifactId>
+    <version>1.0.0</version>
+</dependency>
 ```
+
+Auto-configures via Spring Boot's `AutoConfiguration.imports` — no `@EnableXxx` or manual bean registration needed.
