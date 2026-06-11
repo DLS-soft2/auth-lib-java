@@ -9,14 +9,14 @@ public final class RolePermissions {
     public static final Map<String, Set<String>> ROLE_PERMISSIONS = Map.of(
             "customer", Set.of(
                     Permission.ORDERS_CREATE, Permission.ORDERS_READ,
-                    Permission.RESTAURANTS_READ,
+                    Permission.RESTAURANTS_READ, Permission.MENU_READ,
                     Permission.PAYMENTS_READ,
                     Permission.USERS_READ, Permission.USERS_UPDATE
             ),
             "courier", Set.of(
                     Permission.COURIERS_READ, Permission.COURIERS_UPDATE,
                     Permission.DELIVERIES_READ, Permission.DELIVERIES_UPDATE,
-                    Permission.RESTAURANTS_READ,
+                    Permission.RESTAURANTS_READ, Permission.MENU_READ,
                     Permission.USERS_READ, Permission.USERS_UPDATE
             ),
             "restaurant", Set.of(

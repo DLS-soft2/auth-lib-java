@@ -68,13 +68,13 @@ class RolePermissionsTest {
     }
 
     @Test
-    void customerHasSixPermissions() {
-        assertEquals(6, RolePermissions.ROLE_PERMISSIONS.get("customer").size());
+    void customerHasSevenPermissions() {
+        assertEquals(7, RolePermissions.ROLE_PERMISSIONS.get("customer").size());
     }
 
     @Test
-    void courierHasSevenPermissions() {
-        assertEquals(7, RolePermissions.ROLE_PERMISSIONS.get("courier").size());
+    void courierHasEightPermissions() {
+        assertEquals(8, RolePermissions.ROLE_PERMISSIONS.get("courier").size());
     }
 
     @Test
