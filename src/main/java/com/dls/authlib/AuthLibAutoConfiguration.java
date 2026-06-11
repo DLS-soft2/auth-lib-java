@@ -18,7 +18,8 @@ public class AuthLibAutoConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(rbacInterceptor());
+        registry.addInterceptor(rbacInterceptor())
+                .excludePathPatterns("/health", "/actuator/**");
     }
 
     @Override

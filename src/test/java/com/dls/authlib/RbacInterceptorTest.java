@@ -39,6 +39,11 @@ class RbacInterceptorTest {
                 return "open";
             }
 
+            @GetMapping("/health")
+            public String health() {
+                return "healthy";
+            }
+
             @GetMapping("/context")
             @RequirePermission(Permission.ORDERS_CREATE)
             public String contextEndpoint(UserContext userContext) {
@@ -107,6 +112,13 @@ class RbacInterceptorTest {
     void endpointWithoutAnnotationAndNoHeadersReturns401() throws Exception {
         mockMvc.perform(get("/open"))
                 .andExpect(status().isUnauthorized());
+    }
+
+    @Test
+    void healthEndpointWithNoHeadersReturns200() throws Exception {
+        mockMvc.perform(get("/health"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("healthy"));
     }
 
     @Test
