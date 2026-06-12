@@ -11,7 +11,7 @@
 
     <groupId>com.dls</groupId>
     <artifactId>auth-lib-java</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
     <name>auth-lib-java</name>
     <description>Shared RBAC library for DLS Java services</description>

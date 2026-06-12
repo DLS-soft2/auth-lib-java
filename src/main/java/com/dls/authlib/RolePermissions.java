@@ -24,6 +24,7 @@ public final class RolePermissions {
                     Permission.RESTAURANTS_UPDATE, Permission.RESTAURANTS_DELETE,
                     Permission.MENU_READ, Permission.MENU_CREATE,
                     Permission.MENU_UPDATE, Permission.MENU_DELETE,
+                    Permission.ORDERS_UPDATE,
                     Permission.USERS_READ, Permission.USERS_UPDATE
             ),
             "admin", Set.of("*")

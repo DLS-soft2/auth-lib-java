@@ -78,7 +78,7 @@ class RolePermissionsTest {
     }
 
     @Test
-    void restaurantHasTenPermissions() {
-        assertEquals(10, RolePermissions.ROLE_PERMISSIONS.get("restaurant").size());
+    void restaurantHasElevenPermissions() {
+        assertEquals(11, RolePermissions.ROLE_PERMISSIONS.get("restaurant").size());
     }
 }

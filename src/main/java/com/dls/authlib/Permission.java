@@ -4,6 +4,7 @@ public final class Permission {
 
     public static final String ORDERS_CREATE = "orders_create";
     public static final String ORDERS_READ = "orders_read";
+    public static final String ORDERS_UPDATE = "orders_update";
     public static final String RESTAURANTS_READ = "restaurants_read";
     public static final String RESTAURANTS_CREATE = "restaurants_create";
     public static final String RESTAURANTS_UPDATE = "restaurants_update";
